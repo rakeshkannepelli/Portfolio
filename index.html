@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rakesh Kannepelli | Creative Tech Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "6OgblLNzm1hswe6_C",
+      });
+    })();
+  </script>
+</head>
+
+<body class="dark-mode">
+
+  <!-- Floating AI Bot -->
+  <div id="ai-bot" class="ai-bot">
+    <div class="bot-eyes">
+      <div class="bot-iris left-eye">
+        <div class="bot-eye"></div>
+      </div>
+      <div class="bot-iris right-eye">
+        <div class="bot-eye"></div>
+      </div>
+    </div>
+    <div class="bot-tooltip hidden">Hey!</div>
+  </div>
+
+  <nav class="navbar">
+    <div class="logo">RK</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+      <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+      <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </button>
+  </nav>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <p class="greeting">Hello, I'm</p>
+        <div class="name-container" id="name-animation-container">
+          <div class="word" id="word-first">
+            <div class="letter-wrapper" data-id="R"><span class="actual-letter">R</span></div>
+            <div class="letter-wrapper" data-id="A_first"><span class="actual-letter">A</span></div>
+            <div class="letter-wrapper" data-id="K_first"><span class="actual-letter">K</span></div>
+            <div class="letter-wrapper" data-id="E_first"><span class="actual-letter">E</span></div>
+            <div class="letter-wrapper" data-id="S"><span class="actual-letter">S</span></div>
+            <div class="letter-wrapper" data-id="H"><span class="actual-letter">H</span></div>
+          </div>
+
+          <div class="word" id="word-last">
+            <div class="letter-wrapper" data-id="K_last"><span class="actual-letter">K</span></div>
+            <div class="letter-wrapper" data-id="A_last"><span class="actual-letter">A</span></div>
+            <div class="letter-wrapper" data-id="N_first"><span class="actual-letter">N</span></div>
+            <div class="letter-wrapper" data-id="N_last"><span class="actual-letter">N</span></div>
+            <div class="letter-wrapper" data-id="E_mid"><span class="actual-letter">E</span></div>
+            <div class="letter-wrapper" data-id="P"><span class="actual-letter">P</span></div>
+            <div class="letter-wrapper" data-id="E_last"><span class="actual-letter">E</span></div>
+            <div class="letter-wrapper" data-id="L_first"><span class="actual-letter">L</span></div>
+            <div class="letter-wrapper" data-id="L_last"><span class="actual-letter">L</span></div>
+            <div class="letter-wrapper" data-id="I"><span class="actual-letter">I</span></div>
+          </div>
+        </div>
+        <p class="subtitle">Creative Technologist & Developer</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="placeholder-section perspective-section">
+      <div class="section-content about-content">
+
+        <!-- ReactBits Pixel Card Profile -->
+        <div class="pixel-card-wrapper">
+          <div class="pixel-card" id="pixel-profile-card">
+            <canvas class="pixel-canvas" id="pixel-canvas"></canvas>
+            <div class="pixel-card-inner">
+              <img src="./src/assets/profile.jpeg" alt="Profile Photo" class="pixel-profile-photo" id="profile-img" />
+              <h3 class="profile-card-name" style="margin-top: 1rem; z-index: 2;">Rakesh Kannepelli</h3>
+              <p class="profile-card-role" style="z-index: 2;">AI/ML · Full Stack Dev</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>Computer Science student focused on AI/ML and Full Stack Development, experienced in developing Generative
+            AI applications. Proficient in Python and modern web technologies, with strong analytical thinking and an
+            ability to quickly adapt to new technologies. Interested in Vibe Coding.</p>
+
+          <div class="social-links">
+            <a href="https://github.com/rakeshkannepelli" target="_blank" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/rakesh-kannepelli-50a456286/" target="_blank" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://leetcode.com/u/rakeshkannepelli/" target="_blank" aria-label="LeetCode">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.337l2.467-2.503c.516-.514.498-1.366-.037-1.901-.535-.535-1.387-.552-1.902-.038l-10.1 10.101c-.981.982-1.469 2.263-1.469 3.545 0 1.282.488 2.563 1.469 3.545l4.348 4.348c.981.981 2.263 1.469 3.545 1.469s2.564-.488 3.545-1.469l2.697-2.607c.516-.514.498-1.366-.037-1.901-.535-.535-1.387-.552-1.902-.038z" />
+              </svg>
+            </a>
+            <a href="mailto:rakeshkannepelli@gmail.com" target="_blank" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <a href="#" class="resume-btn" id="resume-btn" download style="margin-top: 1.5rem;">
+            <span class="resume-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </span>
+            <span class="resume-text">Download Resume</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="placeholder-section perspective-section">
+      <div class="section-content">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <div class="skill-cards">
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                  alt="Python" />
+                <span>Python</span>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                  alt="HTML" />
+                <span>HTML</span>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" />
+                <span>CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Libraries</h3>
+            <div class="skill-cards">
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg"
+                  alt="NumPy" />
+                <span>NumPy</span>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg"
+                  alt="Pandas" />
+                <span>Pandas</span>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg"
+                  alt="Matplotlib" />
+                <span>Matplotlib</span>
+              </div>
+              <div class="skill-card">
+                <!-- Seaborn doesn't have an official devicon, using a generic chart or text -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                  stroke="#3b82f6" stroke-width="2">
+                  <path d="M3 3v18h18" />
+                  <path d="M18 17V9" />
+                  <path d="M13 17V5" />
+                  <path d="M8 17v-3" />
+                </svg>
+                <span>Seaborn</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Tools & Frameworks</h3>
+            <div class="skill-cards">
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" />
+                <span>Git</span>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                  alt="GitHub" />
+                <span>GitHub</span>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+                  alt="VS Code" />
+                <span>VS Code</span>
+              </div>
+              <div class="skill-card">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"
+                  alt="Scikit-learn" />
+                <span>Scikit-learn</span>
+              </div>
+              <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
+                  alt="Linux" />
+                <span>Linux</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>AI Tools</h3>
+            <div class="skill-cards">
+              <div class="skill-card">
+                <!-- Custom Antigravity SVG -->
+                <svg viewBox="0 0 100 100" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="agSkillGrad" x1="0%" y1="100%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#3b82f6" />
+                      <stop offset="30%" stop-color="#10b981" />
+                      <stop offset="50%" stop-color="#f59e0b" />
+                      <stop offset="70%" stop-color="#ef4444" />
+                      <stop offset="100%" stop-color="#8b5cf6" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M 15 85 C 30 75, 35 25, 50 25 C 65 25, 70 75, 85 85 C 75 90, 65 75, 50 45 C 35 75, 25 90, 15 85 Z"
+                    fill="url(#agSkillGrad)" />
+                </svg>
+                <span>Antigravity</span>
+              </div>
+              <div class="skill-card">
+                <!-- Claude SVG -->
+                <svg role="img" viewBox="0 0 24 24" width="30" height="30" xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor">
+                  <path
+                    d="M17.472 2.659A10.36 10.36 0 0 0 12 1.488C6.182 1.488 1.464 6.205 1.464 12c0 5.818 4.718 10.535 10.536 10.535 5.818 0 10.535-4.717 10.535-10.535 0-1.89-.5-3.666-1.385-5.21l-3.328 6.551-2.923-1.484zm-3.082 16.593A7.525 7.525 0 0 1 12 19.585c-4.183 0-7.575-3.393-7.575-7.576 0-4.184 3.392-7.576 7.575-7.576 1.157 0 2.253.262 3.232.73l-1.077 2.12c-.66-.275-1.383-.427-2.146-.427-2.99 0-5.413 2.423-5.413 5.413s2.423 5.413 5.413 5.413c1.782 0 3.364-.863 4.343-2.193z" />
+                </svg>
+                <span>Claude</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="placeholder-section perspective-section">
+      <div class="section-content">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <a href="https://github.com/rakeshkannepelli/R-Links" target="_blank" class="project-card">
+            <div class="project-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+            </div>
+            <div class="project-info">
+              <h3>Local Link-Manager (R-Links)</h3>
+              <p>This is a local link manager web application used to store useful links in an organized manner locally.
+              </p>
+              <div class="project-tags">
+                <span>Web App</span>
+                <span>AI Generated</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="placeholder-section perspective-section">
+      <div class="section-content">
+        <h2>Certifications</h2>
+        <a href="https://www.linkedin.com/learning/certificates/3e58cdbec47186dc78d6ae14857ea5e1f8d1429fb7e4faf65be1d477a1e8eb81"
+          target="_blank" class="cert-card" aria-label="View Certificate">
+          <svg class="cert-icon" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <defs>
+              <linearGradient id="certGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#10b981" />
+                <stop offset="100%" stop-color="#3b82f6" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z"
+              fill="url(#certGrad)" stroke="none"></path>
+            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" stroke="url(#certGrad)" fill="none"
+              stroke-width="2"></polyline>
+            <path d="M12 5L12 11 M9 8L15 8" stroke="white" stroke-width="2"></path>
+          </svg>
+          <div class="cert-info">
+            <h3>Career Essentials in GitHub Professional Certificate</h3>
+            <h4>LinkedIn Learning</h4>
+            <p>Comprehensive training in version control, collaboration workflows, and GitHub best practices.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Section with EmailJS -->
+    <section id="contact" class="placeholder-section perspective-section">
+      <div class="section-content">
+        <h2>Let's Connect</h2>
+
+        <form class="contact-form" id="contact-form">
+          <p class="contact-subtitle">Have an exciting project or want to chat? Send me a message!</p>
+          <!-- Hidden field: tells EmailJS exactly where to deliver the message -->
+          <input type="hidden" name="to_email" value="rakeshkannepelli@gmail.com">
+          <input type="hidden" name="to_name" value="Rakesh Kannepelli">
+          <div class="form-group">
+            <input type="text" name="user_name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="user_email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span>Send Message</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+          <p class="form-result hidden" id="form-result"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
