@@ -118,7 +118,17 @@ function initHeroAnimation() {
 
     let hoverAnim = gsap.timeline({ paused: true })
       .to(letter, { opacity: 0, scale: 0.5, duration: 0.2, ease: 'power1.inOut' })
-      .to(icon, { opacity: 1, scale: 1, rotation: 0, duration: 0.3, ease: 'back.out(1.5)' }, '<0.1')
+
+    if (wrapper.dataset.id === 'I') {
+      const dot = icon.querySelector('.anim-dot')
+      const line = icon.querySelector('.anim-line')
+      hoverAnim
+        .to(icon, { opacity: 1, scale: 1, rotation: 180, duration: 0.5, ease: 'back.out(1.5)' }, '<0.1')
+        .to(dot, { scale: 1.4, transformOrigin: 'center', duration: 0.25, yoyo: true, repeat: 1, ease: 'power2.out' }, '<')
+        .to(line, { scaleY: 0.7, transformOrigin: 'center', duration: 0.25, yoyo: true, repeat: 1, ease: 'power2.out' }, '<')
+    } else {
+      hoverAnim.to(icon, { opacity: 1, scale: 1, rotation: 0, duration: 0.3, ease: 'back.out(1.5)' }, '<0.1')
+    }
 
     hoverAnimations.set(wrapper, hoverAnim);
 

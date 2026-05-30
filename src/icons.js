@@ -21,11 +21,11 @@ const deathNoteLSvg = `<svg role="img" viewBox="0 0 100 100" xmlns="http://www.w
   <path d="M20,35 C15,40 10,40 5,35 C10,30 20,25 20,35 Z" />
 </svg>`;
 
-// Custom 'I' - Glowing, Sci-Fi pillar
-const customISvg = `<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-  <rect x="10" y="6" width="4" height="16" rx="1" />
-  <circle cx="12" cy="3" r="2" fill="currentColor" />
-  <path d="M 8 22 L 16 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+// Custom 'I' - Beautiful info-circle SVG that will morph into warning-circle
+const infoWarningSvg = `<svg class="info-warning-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;">
+  <circle cx="12" cy="12" r="10"></circle>
+  <line class="anim-dot" x1="12" y1="8" x2="12" y2="8"></line>
+  <line class="anim-line" x1="12" y1="12" x2="12" y2="16"></line>
 </svg>`;
 
 export const iconMapping = {
@@ -47,7 +47,7 @@ export const iconMapping = {
   'E_last': { svg: simpleIcons.siExpress.svg, hex: 'var(--dynamic-anthropic)' },
   'L_first': { isImage: true, src: 'https://brandlogos.net/wp-content/uploads/2015/10/l_death_note-logo_brandlogos.net_x4xl0-768x893.png', invertInDarkMode: true },
   'L_last': { svg: simpleIcons.siLinux.svg, hex: simpleIcons.siLinux.hex },
-  'I': { svg: customISvg, hex: '00E5FF' } // Cyber cyan 'I'
+  'I': { svg: infoWarningSvg, hex: '0ea5e9' } // Deep sky blue / cyan 'I' that morphs
 };
 
 export function injectIcons() {

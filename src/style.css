@@ -269,8 +269,16 @@ body.light-mode .dn-logo {
 .icon-svg svg {
   width: 100%;
   height: 100%;
-  fill: currentColor;
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+}
+
+.icon-svg svg:not(.info-warning-svg) {
+  fill: currentColor;
+}
+
+.icon-svg svg.info-warning-svg {
+  fill: none;
+  stroke: currentColor;
 }
 
 body.light-mode .icon-svg svg {
