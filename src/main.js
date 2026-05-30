@@ -123,7 +123,7 @@ function initHeroAnimation() {
       const dot = icon.querySelector('.anim-dot')
       const line = icon.querySelector('.anim-line')
       hoverAnim
-        .to(icon, { opacity: 1, scale: 1, rotation: 180, duration: 0.5, ease: 'back.out(1.5)' }, '<0.1')
+        .to(icon, { opacity: 1, scale: 1, rotation: 180, color: '#ef4444', duration: 0.5, ease: 'back.out(1.5)' }, '<0.1')
         .to(dot, { scale: 1.4, transformOrigin: 'center', duration: 0.25, yoyo: true, repeat: 1, ease: 'power2.out' }, '<')
         .to(line, { scaleY: 0.7, transformOrigin: 'center', duration: 0.25, yoyo: true, repeat: 1, ease: 'power2.out' }, '<')
     } else {
