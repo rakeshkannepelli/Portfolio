@@ -1,0 +1,1343 @@
+/* ==========================================================
+   RAKESH KANNEPELLI - FREELANCE CLIENT ACQUISITION PORTAL
+   Refined Skeuomorphic Design System (Precision Human-Crafted)
+   Palette: Deep Obsidian Slate (#0f1117), Charcoal Raised Surfaces (#1c212d),
+   Rich Amber (#f59e0b) & Electric Royal Blue (#3b82f6)
+   ========================================================== */
+
+:root {
+  --bg-primary: #0d0f15;
+  --bg-secondary: #131722;
+  --bg-surface: #181d29;
+  --bg-surface-raised: #202636;
+  --bg-well: #0a0c12;
+  
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-dark: rgba(0, 0, 0, 0.7);
+  --border-active: #3b82f6;
+
+  --accent-gold: #f59e0b;
+  --accent-gold-glow: rgba(245, 158, 11, 0.25);
+  --accent-blue: #3b82f6;
+  --accent-blue-glow: rgba(59, 130, 246, 0.3);
+  --accent-whatsapp: #25d366;
+  --accent-emerald: #10b981;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  /* Refined Skeuomorphic Gradients (Subtle & High Precision) */
+  --skeuo-grad-surface: linear-gradient(180deg, #1f2534 0%, #151924 100%);
+  --skeuo-grad-raised: linear-gradient(180deg, #262d3e 0%, #1a202d 100%);
+  --skeuo-grad-btn-gold: linear-gradient(180deg, #fbbf24 0%, #d97706 100%);
+  --skeuo-grad-btn-blue: linear-gradient(180deg, #60a5fa 0%, #2563eb 100%);
+  --skeuo-grad-btn-whatsapp: linear-gradient(180deg, #34d399 0%, #059669 100%);
+  --skeuo-grad-btn-dark: linear-gradient(180deg, #252b3a 0%, #161a24 100%);
+
+  /* Thin Multi-Layer Shadows & Specular Highlights */
+  --skeuo-shadow-card: 
+    0 10px 24px -4px rgba(0, 0, 0, 0.6),
+    0 2px 6px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+  --skeuo-shadow-raised: 
+    0 4px 12px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+
+  --skeuo-shadow-well: 
+    inset 0 3px 8px rgba(0, 0, 0, 0.7),
+    0 1px 0 rgba(255, 255, 255, 0.05);
+
+  --skeuo-shadow-btn: 
+    0 3px 8px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.4);
+
+  --font-display: 'Outfit', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+
+  --header-height: 72px;
+  --progress-height: 48px;
+  --transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-image: 
+    radial-gradient(circle at 12% 15%, rgba(59, 130, 246, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 88% 85%, rgba(245, 158, 11, 0.05) 0%, transparent 45%);
+}
+
+/* Skeuomorphic Common Utilities */
+.skeuo-card {
+  background: var(--skeuo-grad-surface);
+  border: 1px solid var(--border-light);
+  border-bottom-color: var(--border-dark);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--skeuo-shadow-card);
+  transition: all var(--transition-fast);
+}
+
+.skeuo-well {
+  background: var(--bg-well);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom-color: rgba(0, 0, 0, 0.8);
+  border-radius: var(--radius-md);
+  box-shadow: var(--skeuo-shadow-well);
+}
+
+.skeuo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--skeuo-grad-btn-dark);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--accent-gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.25rem 0.8rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--skeuo-shadow-btn);
+}
+
+.skeuo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom-color: rgba(0, 0, 0, 0.6);
+  border-radius: var(--radius-full);
+  box-shadow: var(--skeuo-shadow-btn);
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.skeuo-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+
+.skeuo-btn:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.skeuo-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: var(--skeuo-grad-raised);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--skeuo-shadow-raised);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ==========================================================
+   Header (Skeuomorphic Top Console)
+   ========================================================== */
+.header-nav {
+  position: sticky;
+  top: 0;
+  height: var(--header-height);
+  background: linear-gradient(180deg, #171c26 0%, #11141d 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+}
+
+.brand-badge {
+  width: 44px;
+  height: 44px;
+  background: var(--skeuo-grad-btn-blue);
+  color: #fff;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: var(--skeuo-shadow-btn);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: #ffffff;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.brand-tag {
+  font-size: 0.74rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+/* 5-Item Nav Buttons */
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--bg-well);
+  padding: 0.3rem 0.45rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--skeuo-shadow-well);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-item-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.nav-item-btn:hover {
+  color: var(--text-primary);
+}
+
+.nav-item-btn.active {
+  background: var(--skeuo-grad-raised);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: var(--skeuo-shadow-raised);
+}
+
+/* Sleek Developer Portfolio Portal Transition Button */
+.portfolio-portal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  background: linear-gradient(180deg, #242a3a 0%, #171b26 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom-color: rgba(0, 0, 0, 0.8);
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  transition: all var(--transition-fast);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.portfolio-portal-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-gold);
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+.portal-link-arrow {
+  font-size: 1rem;
+  color: var(--accent-gold);
+  transition: transform 0.2s ease;
+}
+
+.portfolio-portal-link:hover .portal-link-arrow {
+  transform: translateX(-3px);
+}
+
+.portal-link-text {
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.portal-link-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  background: rgba(59, 130, 246, 0.18);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  color: #93c5fd;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+}
+
+/* ==========================================================
+   Progress Bar (Recessed Skeuomorphic Groove)
+   ========================================================== */
+.step-progress-strip {
+  position: sticky;
+  top: var(--header-height);
+  background: #11141c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+  padding: 0.5rem 1.5rem;
+}
+
+.progress-strip-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.progress-header-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.step-indicator-pill {
+  background: var(--skeuo-grad-btn-gold);
+  color: #000;
+  padding: 0.15rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.74rem;
+  font-weight: 800;
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3);
+}
+
+.progress-track-groove {
+  width: 100%;
+  height: 6px;
+  background: var(--bg-well);
+  border-radius: var(--radius-full);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  padding: 1px;
+}
+
+.progress-fill-mercury {
+  height: 100%;
+  width: 20%;
+  background: linear-gradient(90deg, #f59e0b 0%, #3b82f6 100%);
+  border-radius: var(--radius-full);
+  transition: width var(--transition-smooth);
+}
+
+/* ==========================================================
+   Horizontal Carousel Viewport (Cross-Platform Touch & 60fps)
+   ========================================================== */
+.slides-viewport {
+  width: 100%;
+  min-height: calc(100vh - var(--header-height) - var(--progress-height));
+  overflow: hidden;
+  position: relative;
+  touch-action: pan-y pinch-zoom;
+}
+
+.slides-track {
+  display: flex;
+  width: 500%;
+  min-height: 100%;
+  transform: translate3d(0, 0, 0);
+  transition: transform var(--transition-smooth);
+  will-change: transform;
+}
+
+.slide-page {
+  width: 20%;
+  flex-shrink: 0;
+  padding: 2.25rem 1.5rem 6.5rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: calc(100vh - var(--header-height) - var(--progress-height));
+}
+
+.slide-inner-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.slide-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.slide-title {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.gold-text {
+  background: linear-gradient(180deg, #fbbf24 0%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slide-sub {
+  max-width: 760px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================
+   Slide 1: Hero Deck & Project Cards
+   ========================================================== */
+.hero-deck-skeuo {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.hero-profile-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.avatar-frame-skeuo {
+  width: 170px;
+  height: 170px;
+  border-radius: var(--radius-lg);
+  padding: 5px;
+  background: var(--skeuo-grad-raised);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: calc(var(--radius-lg) - 4px);
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.profile-role-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.location-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.2rem;
+}
+
+.hero-stats-skeuo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.stat-well {
+  padding: 0.75rem 0.4rem;
+  text-align: center;
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+}
+
+.stat-lbl {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.client-guarantees-well {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  padding: 0.9rem 1.25rem;
+}
+
+.guarantee-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.projects-deck-skeuo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.project-skeuo-card {
+  padding: 1.1rem;
+  border-radius: var(--radius-md);
+  background: var(--skeuo-grad-raised);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--skeuo-shadow-raised);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.project-skeuo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-title {
+  font-family: var(--font-display);
+  font-size: 0.96rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.project-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.project-stack-tags {
+  font-size: 0.72rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  margin-top: auto;
+}
+
+/* ==========================================================
+   Slide 2: 5 Business Service Models
+   ========================================================== */
+.services-deck-5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.service-card-skeuo {
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.service-card-skeuo:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.service-card-skeuo.active-service {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 1px var(--accent-gold), var(--skeuo-shadow-card);
+  background: linear-gradient(180deg, #242b3b 0%, #171b26 100%);
+}
+
+.service-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-tactile-check {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background: var(--bg-well);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--skeuo-shadow-well);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.service-card-skeuo.active-service .service-tactile-check {
+  background: var(--skeuo-grad-btn-gold);
+  color: #000;
+  border-color: #fbbf24;
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.4);
+}
+
+.service-heading {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.service-desc-text {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.service-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.service-bullets li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bullet-gold {
+  color: var(--accent-gold);
+  font-weight: 900;
+}
+
+/* ==========================================================
+   Slide 3: Chronological Flow & Interactive Scope Adder
+   ========================================================== */
+.add-custom-scope-box {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  border-color: rgba(245, 158, 11, 0.3);
+  background: linear-gradient(180deg, #1f2535 0%, #151924 100%);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.add-scope-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.add-scope-sparkle {
+  font-size: 1.35rem;
+}
+
+.add-scope-title {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.add-scope-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.custom-input-group {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.custom-input-skeuo {
+  flex: 1;
+  background: var(--bg-well);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.1rem;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.custom-input-skeuo:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 2px var(--accent-gold-glow), inset 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.btn-add-custom {
+  background: var(--skeuo-grad-btn-gold);
+  color: #000;
+  font-weight: 800;
+  font-size: 0.84rem;
+  padding: 0.75rem 1.25rem;
+  white-space: nowrap;
+}
+
+.scope-flow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.15rem;
+}
+
+.flow-item-card {
+  padding: 1.15rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all var(--transition-fast);
+  user-select: none;
+  background: var(--skeuo-grad-raised);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--skeuo-shadow-raised);
+}
+
+.flow-item-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.flow-item-card.flow-active {
+  border-color: var(--accent-blue);
+  background: linear-gradient(180deg, #22293b 0%, #171c28 100%);
+  box-shadow: 0 0 0 1px var(--accent-blue), var(--skeuo-shadow-raised);
+}
+
+.tactile-switch {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  background: var(--bg-well);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--skeuo-shadow-well);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.flow-item-card.flow-active .tactile-switch {
+  background: var(--skeuo-grad-btn-blue);
+  color: #fff;
+  border-color: #60a5fa;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+}
+
+.flow-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.flow-step-tag {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--accent-gold);
+  letter-spacing: 0.05em;
+}
+
+.flow-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.flow-desc {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Dynamically Added Custom Feature Cards */
+.dynamic-custom-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.15rem;
+}
+
+.custom-added-card {
+  border-color: rgba(245, 158, 11, 0.5) !important;
+  background: linear-gradient(180deg, #242938 0%, #1a1e2a 100%) !important;
+}
+
+.custom-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.custom-remove-btn {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #f87171;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.custom-remove-btn:hover {
+  background: rgba(239, 68, 68, 0.35);
+  color: #fff;
+}
+
+/* ==========================================================
+   Slide 4: Market-Standard Smart Estimator
+   ========================================================== */
+.calc-deck-skeuo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2.25rem;
+}
+
+.calc-display-console {
+  padding: 1.85rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, #131722 0%, #0d0f17 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.8), 0 8px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.market-standard-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--skeuo-grad-btn-gold);
+  color: #000;
+  font-weight: 800;
+  font-size: 0.74rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  align-self: flex-start;
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.35);
+}
+
+.calc-led-price {
+  font-family: var(--font-display);
+  font-size: 2.85rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.calc-delivery-meter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: var(--radius-md);
+  color: #6ee7b7;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.quick-adjust-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.adjust-row-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1rem;
+  background: var(--skeuo-grad-raised);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--skeuo-shadow-raised);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.adjust-row-item.adjust-active {
+  border-color: var(--accent-gold);
+  background: linear-gradient(180deg, #262e40 0%, #1a202d 100%);
+}
+
+.adjust-name {
+  font-size: 0.84rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.adjust-price {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+}
+
+/* ==========================================================
+   Slide 5: Multi-Channel Booking & Download PDF Proposal
+   ========================================================== */
+.contact-deck-skeuo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  padding: 2.25rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.contact-form-skeuo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.form-group-skeuo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.form-group-skeuo label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.input-skeuo {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  background: var(--bg-well);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 0.8rem 1rem;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.input-skeuo::placeholder {
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  opacity: 0.85;
+}
+
+.input-skeuo:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px var(--accent-blue-glow), inset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+textarea.input-skeuo {
+  resize: vertical;
+}
+
+.booking-actions-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.btn-pdf-download {
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  color: #fff;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  font-size: 0.9rem;
+  white-space: normal;
+  text-align: center;
+}
+
+.btn-whatsapp-skeuo {
+  background: var(--skeuo-grad-btn-whatsapp);
+  color: #fff;
+  padding: 0.85rem 1rem;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  font-size: 0.92rem;
+  white-space: normal;
+  text-align: center;
+}
+
+.btn-email-skeuo {
+  background: var(--skeuo-grad-btn-gold);
+  color: #000;
+  padding: 0.85rem 1rem;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  font-size: 0.9rem;
+  white-space: normal;
+  text-align: center;
+}
+
+.form-feedback {
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.45;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-feedback.success {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid #10b981;
+  color: #6ee7b7;
+}
+
+.form-feedback.error {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+}
+
+.form-feedback.hidden {
+  display: none;
+}
+
+.direct-channels-skeuo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.channel-row-skeuo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--skeuo-grad-raised);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--skeuo-shadow-raised);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.channel-row-skeuo:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-blue);
+}
+
+/* ==========================================================
+   Slim, Right-Aligned Skeuomorphic Console Dock
+   ========================================================== */
+.slide-nav-dock {
+  position: fixed;
+  bottom: 22px;
+  right: 28px;
+  left: auto;
+  transform: none;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.42rem 1rem;
+  background: linear-gradient(180deg, #222838 0%, #151923 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom-color: rgba(0, 0, 0, 0.8);
+  border-radius: var(--radius-full);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.dock-action-btn.slim {
+  padding: 0.38rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: var(--skeuo-grad-btn-dark);
+  color: var(--text-primary);
+}
+
+.dock-action-btn.slim.primary {
+  background: var(--skeuo-grad-btn-blue);
+  color: #fff;
+}
+
+.dock-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.dock-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--bg-well);
+  box-shadow: var(--skeuo-shadow-well);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.dock-dot.active {
+  width: 22px;
+  border-radius: var(--radius-full);
+  background: var(--skeuo-grad-btn-gold);
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.4);
+}
+
+/* ==========================================================
+   Responsive Breakpoints (Desktop, Tablet, Mobile)
+   ========================================================== */
+@media (max-width: 960px) {
+  .hero-deck-skeuo {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .calc-deck-skeuo {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem;
+  }
+  .contact-deck-skeuo {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem;
+  }
+  .nav-items {
+    display: none;
+  }
+  .slide-title {
+    font-size: 1.85rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-container {
+    padding: 0 0.85rem;
+  }
+  .brand-name {
+    font-size: 1.1rem;
+  }
+  .brand-tag {
+    font-size: 0.7rem;
+  }
+  .portal-link-text {
+    display: none;
+  }
+  .portfolio-portal-link {
+    padding: 0.35rem 0.65rem;
+  }
+  
+  /* Generous 11rem (176px) bottom clearance so NO buttons are ever covered by the dock */
+  .slide-page {
+    padding: 1.25rem 0.85rem 11.5rem !important;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .slide-inner-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 1.15rem;
+  }
+
+  .slide-title {
+    font-size: 1.45rem;
+    line-height: 1.25;
+  }
+
+  .slide-sub {
+    font-size: 0.85rem;
+  }
+
+  .client-guarantees-well {
+    grid-template-columns: 1fr;
+    padding: 0.75rem 1rem;
+  }
+
+  .projects-deck-skeuo {
+    grid-template-columns: 1fr;
+  }
+
+  .add-custom-scope-box {
+    padding: 1rem;
+  }
+
+  .custom-input-group {
+    flex-direction: column;
+  }
+
+  .btn-add-custom {
+    width: 100%;
+  }
+
+  .calc-deck-skeuo {
+    padding: 1.15rem 0.85rem !important;
+    gap: 1.25rem !important;
+    overflow: hidden !important;
+  }
+
+  .calc-display-console {
+    padding: 1.25rem 0.85rem !important;
+  }
+
+  .calc-led-price {
+    font-size: 2.2rem !important;
+  }
+
+  /* Form and Card Overflow Fix */
+  .contact-deck-skeuo {
+    padding: 1.15rem 0.85rem !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .input-skeuo {
+    padding: 0.75rem 0.85rem !important;
+    font-size: 0.88rem !important;
+  }
+
+  .direct-channels-skeuo {
+    padding: 1.15rem 0.85rem !important;
+  }
+
+  .btn-pdf-download,
+  .btn-whatsapp-skeuo,
+  .btn-email-skeuo {
+    font-size: 0.85rem !important;
+    padding: 0.8rem 0.85rem !important;
+  }
+
+  /* Mobile Dock: Centered with comfortable touch spacing */
+  .slide-nav-dock {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    bottom: 12px !important;
+    width: calc(100% - 24px) !important;
+    max-width: 380px !important;
+    padding: 0.38rem 0.75rem !important;
+    justify-content: space-between !important;
+    background: rgba(22, 27, 38, 0.94) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  }
+
+  .dock-action-btn.slim {
+    padding: 0.36rem 0.85rem !important;
+    font-size: 0.8rem !important;
+  }
+}
