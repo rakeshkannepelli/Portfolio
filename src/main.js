@@ -15,22 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm()
   initResumeAnimation()
   initAIBot()
-  initPortalTransition()
 })
-
-function initPortalTransition() {
-  const portalLink = document.getElementById('hire-me-portal-link');
-  const curtain = document.getElementById('portal-transition-curtain');
-  if (!portalLink || !curtain) return;
-
-  portalLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    curtain.classList.add('active');
-    setTimeout(() => {
-      window.location.href = portalLink.getAttribute('href');
-    }, 650);
-  });
-}
 
 function initThemeToggle() {
   const themeBtn = document.getElementById('theme-toggle')
