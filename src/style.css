@@ -813,3 +813,45 @@ body.light-mode .form-group textarea {
     width: 240px;
   }
 }
+/* Transition button to Freelance Portal */
+.freelance-portal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(255, 215, 0, 0.05));
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 999px;
+  color: #f5c518;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin-left: 0.5rem;
+}
+
+.freelance-portal-btn:hover {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(255, 215, 0, 0.15));
+  border-color: #f5c518;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+  color: #ffffff;
+}
+
+.freelance-portal-btn .portal-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+.freelance-portal-btn .portal-arrow {
+  transition: transform 0.2s ease;
+}
+
+.freelance-portal-btn:hover .portal-arrow {
+  transform: translateX(3px);
+}
